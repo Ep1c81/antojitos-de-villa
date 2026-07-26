@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antojitos de Villa | El Mejor Marisco & Tradición Costarricense</title>
+    <title>Antojitos de Villa | Mariscos & Tradición Tica</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Hero Section with HTML5 Video & Image Fallback -->
+    <!-- Underwater Video Background Hero -->
     <header class="hero">
-        <video autoplay muted loop playsinline id="bg-video" poster="option1.jpg">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-footage-of-a-coral-reef-40824-large.mp4" type="video/mp4">
             <source src="https://cdn.coverr.co/videos/coverr-underwater-fishes-5321/1080p.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
         
         <nav class="navbar">
             <div class="logo-container">
-                <img src="logo.jpg" alt="Antojitos de Villa Logo" class="logo">
+                <img src="./logo.jpg" alt="Antojitos de Villa Logo" class="logo" onerror="this.src='https://images.unsplash.com/photo-1545247181-516773cae754?w=200&auto=format&fit=crop&q=80'">
             </div>
             <div class="nav-links">
                 <a href="#about">Nosotros</a>
@@ -30,40 +31,40 @@
         </nav>
 
         <div class="hero-content">
-            <span class="badge-fomo"><i class="fa-solid fa-fire-flame-curved"></i> ¡Últimas mesas disponibles para hoy!</span>
+            <span class="badge-fomo"><i class="fa-solid fa-fire"></i> ¡Solo 4 mesas disponibles para hoy!</span>
             <h1>Sabor Marino & Tradición Tica</h1>
-            <p>El pulpo a la parrilla más exquisito y los mariscos más frescos en un ambiente familiar inolvidable.</p>
+            <p>El mejor pulpo a la parrilla, ceviche fresco y la calidez costarricense en un solo lugar.</p>
             <div class="hero-buttons">
                 <a href="https://wa.me/50622493700?text=Hola,%20quisiera%20hacer%20un%20pedido%20Express" class="btn btn-whatsapp" target="_blank">
                     <i class="fa-brands fa-whatsapp"></i> Pedir Express (2249-3700)
                 </a>
-                <a href="#reservations" class="btn btn-gold">
+                <a href="https://wa.me/50622493700?text=Hola,%20deseo%20reservar%20una%20mesa" class="btn btn-gold" target="_blank">
                     <i class="fa-solid fa-calendar-check"></i> Reservar Mesa
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- FOMO Alert Bar -->
+    <!-- Dynamic FOMO Bar -->
     <div class="fomo-bar">
-        <p><i class="fa-solid fa-fish"></i> <strong>Pescado y Mariscos Frescos del Día:</strong> Recibidos hoy directamente desde nuestras costas.</p>
+        <p><i class="fa-solid fa-fish"></i> <strong>Mariscos Frescos del Día:</strong> Cocina abierta. ¡Pide directo a tu mesa o a domicilio!</p>
     </div>
 
     <!-- About Section -->
     <section id="about" class="about-section">
         <div class="container grid-2">
             <div class="about-text">
-                <span class="sub-heading">Calidad VIP & Calidez</span>
-                <h2>Pasión por el Mar y Servicio de Excelencia</h2>
-                <p>En <strong>Antojitos de Villa</strong> fusionamos la frescura del océano con el sabor autóctono costarricense. Nuestro equipo le brindará una atención excepcional en cada visita.</p>
+                <span class="sub-heading">Calidad VIP & Servicio Amigable</span>
+                <h2>Pasión por el Mar y la Comida Tradicional</h2>
+                <p>En <strong>Antojitos de Villa</strong> combinamos ingredientes marinos de máxima frescura con la auténtica sazón costarricense. Terraza abierta, salón confortable y la mejor atención.</p>
                 <ul class="features-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Terraza abierta y acogedor salón bajo techado.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Amplio parqueo privado y seguro para su tranquilidad.</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Trato cercano, profesional y 100% familiar.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Espaciosa terraza y salón climatizado.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Parqueo privado y vigilado para tu comodidad.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Trato cercano, rápido y 100% familiar.</li>
                 </ul>
             </div>
             <div class="about-image-wrapper">
-                <img src="option1.jpg" alt="Pulpo a la Parrilla Antojitos de Villa" class="styled-img">
+                <img src="./option1.jpg" alt="Pulpo a la Parrilla Antojitos de Villa" class="styled-img" onerror="this.src='https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&auto=format&fit=crop&q=80'">
             </div>
         </div>
     </section>
@@ -72,8 +73,8 @@
     <section id="menu" class="menu-section">
         <div class="container">
             <div class="text-center">
-                <span class="sub-heading">Gastronomía Selección Gold</span>
-                <h2 class="section-title">Nuestro Menú Especializado</h2>
+                <span class="sub-heading">Gastronomía de Excelencia</span>
+                <h2 class="section-title">Nuestro Menú</h2>
             </div>
             
             <div class="menu-tabs">
@@ -85,9 +86,9 @@
             <div id="mariscos" class="menu-content active">
                 <div class="menu-grid">
                     <div class="menu-card featured">
-                        <span class="tag"><i class="fa-solid fa-star"></i> Plato Estrella</span>
+                        <span class="tag"><i class="fa-solid fa-star"></i> Especialidad</span>
                         <h3>Pulpo Antojitos a la Parrilla</h3>
-                        <p>Tentáculos marinados en hierbas finas, sellados a la parrilla sobre puré suave de la casa y lonjas de atún en corteza de ajonjolí.</p>
+                        <p>Tentáculos de pulpo marinados en hierbas finas, sellados a la parrilla sobre puré suave de la casa y lonjas de atún en corteza de ajonjolí.</p>
                         <span class="price">₡12,500</span>
                     </div>
                     <div class="menu-card">
@@ -131,22 +132,22 @@
         </div>
     </section>
 
-    <!-- Ambiance Section -->
+    <!-- Ambiance & Parking Section -->
     <section id="ambiance" class="ambiance-section">
         <div class="container grid-2">
             <div class="ambiance-img-wrapper">
-                <img src="fachada.jpg" alt="Fachada Antojitos de Villa" class="styled-img">
+                <img src="./fachada.jpg" alt="Fachada Antojitos de Villa" class="styled-img" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80'">
             </div>
             <div>
-                <span class="sub-heading">Ambiente Confortable</span>
-                <h2>Espacios Diseñados para Disfrutar</h2>
-                <p>Disfrute del aire libre en nuestra terraza o relájese en nuestro salón principal. Contamos con las instalaciones perfectas para almuerzos ejecutivos, cenas románticas y reuniones familiares.</p>
+                <span class="sub-heading">Instalaciones Confortables</span>
+                <h2>El Espacio Ideal para Compartir</h2>
+                <p>Disfruta de la brisa en nuestra terraza o descansa en el área bajo techo. Diseñado para reuniones de amigos, cenas familiares y celebraciones.</p>
                 
                 <div class="parking-card">
-                    <img src="parqueo.jpg" alt="Parqueo Antojitos de Villa" class="parking-thumb">
+                    <img src="./parqueo.jpg" alt="Parqueo Antojitos de Villa" class="parking-thumb" onerror="this.src='https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=300&auto=format&fit=crop&q=80'">
                     <div>
                         <strong><i class="fa-solid fa-square-parking"></i> Parqueo Privado Incluido</strong>
-                        <p>Estacionamiento exclusivo y amplio justo al lado del restaurante.</p>
+                        <p>Espacio amplio y seguro justo frente al local.</p>
                     </div>
                 </div>
             </div>
@@ -156,15 +157,15 @@
     <!-- Call to Action Section -->
     <section id="reservations" class="cta-section">
         <div class="container text-center">
-            <h2>¡Asegure su Mesa para Hoy!</h2>
-            <p>Nuestra terraza y mesas interiores suelen llenarse con rapidez. Reserve con anticipación por WhatsApp.</p>
+            <h2>¡Reserva tu Mesa Ahora!</h2>
+            <p>Asegura tu lugar en terraza o salón interior antes de que se agoten las mesas del día.</p>
             <a href="https://wa.me/50622493700?text=Hola,%20deseo%20reservar%20una%20mesa" class="btn btn-gold btn-large" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Reservar Ahora por WhatsApp
+                <i class="fa-brands fa-whatsapp"></i> Reservar Vía WhatsApp
             </a>
         </div>
     </section>
 
-    <!-- Floating WhatsApp Action Button -->
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/50622493700?text=Hola!%20Me%20gustaria%20hacer%20un%20pedido%20o%20consulta" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
