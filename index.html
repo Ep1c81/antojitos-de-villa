@@ -23,6 +23,7 @@
             </div>
             <div class="nav-links">
                 <a href="#about">Nosotros</a>
+                <a href="#aquarium">Experiencia</a>
                 <a href="#menu">Menú</a>
                 <a href="#ambiance">Ambiente</a>
                 <a href="#reservations" class="btn-nav">Reservar</a>
@@ -44,7 +45,7 @@
         </div>
     </header>
 
-    <!-- Dynamic FOMO Bar -->
+    <!-- FOMO Bar -->
     <div class="fomo-bar">
         <p><i class="fa-solid fa-fish"></i> <strong>Mariscos Frescos del Día:</strong> Cocina abierta. ¡Pide directo a tu mesa o a domicilio!</p>
     </div>
@@ -68,7 +69,67 @@
         </div>
     </section>
 
-    <!-- Menu Section with Visual Dish Cards -->
+    <!-- Dynamic Aquarium Experience Section -->
+    <section id="aquarium" class="aquarium-section">
+        <video autoplay muted loop playsinline id="aquarium-bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-footage-of-a-coral-reef-40824-large.mp4" type="video/mp4">
+        </video>
+        <div class="aquarium-overlay"></div>
+
+        <div class="bubbles-container">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+
+        <div class="container relative-z">
+            <div class="text-center">
+                <span class="sub-heading"><i class="fa-solid fa-water"></i> Experiencia Viva</span>
+                <h2 class="section-title">El Frescor del Océano en Tu Mesa</h2>
+                <p class="aquarium-subtitle">Garantizamos la máxima calidad seleccionando minuciosamente el mejor producto marino cada día.</p>
+            </div>
+
+            <div class="aquarium-grid">
+                <div class="aquarium-card">
+                    <div class="card-icon"><i class="fa-solid fa-fish-fins"></i></div>
+                    <h3>100% Frescura Marítima</h3>
+                    <p>Producto seleccionado día a día directo de nuestras costas costarricenses.</p>
+                </div>
+
+                <div class="aquarium-card highlight">
+                    <div class="card-icon"><i class="fa-solid fa-anchor"></i></div>
+                    <h3>Receta Artesanal</h3>
+                    <p>Especialistas en pulpo a la parrilla, ceviches cargados de sazón y mariscadas supremas.</p>
+                </div>
+
+                <div class="aquarium-card">
+                    <div class="card-icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Ambiente Sumergido</h3>
+                    <p>Un entorno único con terraza y salón pensado para toda la familia.</p>
+                </div>
+            </div>
+
+            <div class="aquarium-stats">
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fa-solid fa-temperature-arrow-down"></i> 100%</span>
+                    <span class="stat-label">Cadena de Frío Garantizada</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fa-solid fa-award"></i> Calidad Gold</span>
+                    <span class="stat-label">Ingredientes Selección VIP</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><i class="fa-solid fa-clock"></i> Pesca del Día</span>
+                    <span class="stat-label">Preparado al Momento</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
     <section id="menu" class="menu-section">
         <div class="container">
             <div class="text-center">
