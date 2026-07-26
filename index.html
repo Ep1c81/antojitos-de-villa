@@ -14,13 +14,12 @@
     <header class="hero">
         <video autoplay muted loop playsinline id="bg-video">
             <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-footage-of-a-coral-reef-40824-large.mp4" type="video/mp4">
-            <source src="https://cdn.coverr.co/videos/coverr-underwater-fishes-5321/1080p.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
         
         <nav class="navbar">
             <div class="logo-container">
-                <img src="./logo.jpg" alt="Antojitos de Villa Logo" class="logo" onerror="this.src='https://images.unsplash.com/photo-1545247181-516773cae754?w=200&auto=format&fit=crop&q=80'">
+                <img src="logo.jpg" alt="Antojitos de Villa Logo" class="logo">
             </div>
             <div class="nav-links">
                 <a href="#about">Nosotros</a>
@@ -64,16 +63,16 @@
                 </ul>
             </div>
             <div class="about-image-wrapper">
-                <img src="./option1.jpg" alt="Pulpo a la Parrilla Antojitos de Villa" class="styled-img" onerror="this.src='https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&auto=format&fit=crop&q=80'">
+                <img src="option1.jpg" alt="Pulpo a la Parrilla Antojitos de Villa" class="styled-img">
             </div>
         </div>
     </section>
 
-    <!-- Menu Section -->
+    <!-- Menu Section with Visual Dish Cards -->
     <section id="menu" class="menu-section">
         <div class="container">
             <div class="text-center">
-                <span class="sub-heading">Gastronomía de Excelencia</span>
+                <span class="sub-heading">Gastronomía Selección Gold</span>
                 <h2 class="section-title">Nuestro Menú</h2>
             </div>
             
@@ -86,25 +85,29 @@
             <div id="mariscos" class="menu-content active">
                 <div class="menu-grid">
                     <div class="menu-card featured">
-                        <span class="tag"><i class="fa-solid fa-star"></i> Especialidad</span>
-                        <h3>Pulpo Antojitos a la Parrilla</h3>
-                        <p>Tentáculos de pulpo marinados en hierbas finas, sellados a la parrilla sobre puré suave de la casa y lonjas de atún en corteza de ajonjolí.</p>
-                        <span class="price">₡12,500</span>
+                        <img src="option1.jpg" alt="Pulpo a la Parrilla" class="card-img">
+                        <div class="card-body">
+                            <span class="tag"><i class="fa-solid fa-star"></i> Especialidad</span>
+                            <h3>Pulpo Antojitos a la Parrilla</h3>
+                            <p>Tentáculos de pulpo marinados en hierbas finas, sellados a la parrilla sobre puré suave de la casa y lonjas de atún en corteza de ajonjolí.</p>
+                            <span class="price">₡12,500</span>
+                        </div>
                     </div>
                     <div class="menu-card">
-                        <h3>Ceviche Mixto Especial</h3>
-                        <p>Pescado blanco, camarón y pulpo macerados en limón real, culantro castilla y aguacate cremoso.</p>
-                        <span class="price">₡7,500</span>
+                        <img src="opion2.jpg" alt="Ceviche Mixto" class="card-img">
+                        <div class="card-body">
+                            <h3>Ceviche Mixto Especial</h3>
+                            <p>Pescado blanco, camarón y pulpo macerados en limón real, culantro castilla y aguacate cremoso.</p>
+                            <span class="price">₡7,500</span>
+                        </div>
                     </div>
                     <div class="menu-card">
-                        <h3>Arroz con Mariscos Supremo</h3>
-                        <p>Salteado de camarones, pulpo y calamar, acompañado de patacones crocantes y ensalada fresca.</p>
-                        <span class="price">₡8,900</span>
-                    </div>
-                    <div class="menu-card">
-                        <h3>Pargo Rojo Entero Frito</h3>
-                        <p>Pargo fresco crujiente al punto exacto, servido con tostadas de plátano verde y pico de gallo.</p>
-                        <span class="price">₡10,500</span>
+                        <img src="option3.jpg" alt="Arroz con Mariscos" class="card-img">
+                        <div class="card-body">
+                            <h3>Arroz con Mariscos Supremo</h3>
+                            <p>Salteado de camarones, pulpo y calamar, acompañado de patacones crocantes y ensalada fresca.</p>
+                            <span class="price">₡8,900</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,30 +116,23 @@
             <div id="tradicional" class="menu-content">
                 <div class="menu-grid">
                     <div class="menu-card">
-                        <h3>Casado Tradicional de la Villa</h3>
-                        <p>Arroz, frijoles caseros, plátano maduro, huevo frito y tu elección de carne asada, pechuga de pollo o chuleta.</p>
-                        <span class="price">₡4,800</span>
-                    </div>
-                    <div class="menu-card">
-                        <h3>Chifrijo Supremo</h3>
-                        <p>Frijoles tiernos, arroz, chicharrón de cerdo crujiente, pico de gallo, aguacate y tortillas tostadas recién hechas.</p>
-                        <span class="price">₡5,200</span>
-                    </div>
-                    <div class="menu-card">
-                        <h3>Fajitas Mixtas de la Casa</h3>
-                        <p>Jugosas tiras de res y pollo salteadas con vegetales frescos, servidas con tortillas de maíz calientes.</p>
-                        <span class="price">₡6,500</span>
+                        <img src="memoantojitos.jpg" alt="Casado Tradicional" class="card-img">
+                        <div class="card-body">
+                            <h3>Casado Tradicional de la Villa</h3>
+                            <p>Arroz, frijoles caseros, plátano maduro, huevo frito y tu elección de carne asada, pechuga de pollo o chuleta.</p>
+                            <span class="price">₡4,800</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ambiance & Parking Section -->
+    <!-- Ambiance Section -->
     <section id="ambiance" class="ambiance-section">
         <div class="container grid-2">
             <div class="ambiance-img-wrapper">
-                <img src="./fachada.jpg" alt="Fachada Antojitos de Villa" class="styled-img" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80'">
+                <img src="fachada.jpg" alt="Fachada Antojitos de Villa" class="styled-img">
             </div>
             <div>
                 <span class="sub-heading">Instalaciones Confortables</span>
@@ -144,7 +140,7 @@
                 <p>Disfruta de la brisa en nuestra terraza o descansa en el área bajo techo. Diseñado para reuniones de amigos, cenas familiares y celebraciones.</p>
                 
                 <div class="parking-card">
-                    <img src="./parqueo.jpg" alt="Parqueo Antojitos de Villa" class="parking-thumb" onerror="this.src='https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=300&auto=format&fit=crop&q=80'">
+                    <img src="parqueo.jpg" alt="Parqueo Antojitos de Villa" class="parking-thumb">
                     <div>
                         <strong><i class="fa-solid fa-square-parking"></i> Parqueo Privado Incluido</strong>
                         <p>Espacio amplio y seguro justo frente al local.</p>
@@ -154,7 +150,7 @@
         </div>
     </section>
 
-    <!-- Call to Action Section -->
+    <!-- Reservations CTA -->
     <section id="reservations" class="cta-section">
         <div class="container text-center">
             <h2>¡Reserva tu Mesa Ahora!</h2>
@@ -166,7 +162,7 @@
     </section>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/50622493700?text=Hola!%20Me%20gustaria%20hacer%20un%20pedido%20o%20consulta" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
+    <a href="https://wa.me/50622493700?text=Hola!%20Me%20gustaria%20hacer%20un%20pedido%20o%20consulta" class="whatsapp-float" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
