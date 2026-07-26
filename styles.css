@@ -2,11 +2,12 @@
     --gold: #d4af37;
     --gold-light: #f3e5ab;
     --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%);
-    --dark-bg: #0b0e14;
-    --card-bg: rgba(22, 27, 34, 0.85);
-    --border-color: rgba(212, 175, 55, 0.35);
+    --dark-bg: #070a0f;
+    --card-bg: rgba(15, 23, 36, 0.75);
+    --border-color: rgba(212, 175, 55, 0.3);
+    --border-glow: rgba(212, 175, 55, 0.6);
     --text-light: #f0f6fc;
-    --text-muted: #a3b1c2;
+    --text-muted: #94a3b8;
     --whatsapp-green: #25d366;
 }
 
@@ -24,7 +25,9 @@ body {
     overflow-x: hidden;
 }
 
-/* Hero Section */
+/* ==========================================
+   Hero Section & Underwater Video
+   ========================================== */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -39,12 +42,9 @@ body {
 
 #bg-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
     z-index: 0;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
@@ -55,7 +55,7 @@ body {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: linear-gradient(180deg, rgba(11,14,20,0.4) 0%, rgba(11,14,20,0.85) 100%);
+    background: linear-gradient(180deg, rgba(7,10,15,0.4) 0%, rgba(7,10,15,0.9) 100%);
     z-index: 1;
 }
 
@@ -74,12 +74,16 @@ body {
 }
 
 .logo {
-    width: 85px;
-    height: 85px;
+    width: 85px; height: 85px;
     border-radius: 50%;
     border: 2px solid var(--gold);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
     object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.logo:hover {
+    transform: rotate(5deg) scale(1.05);
 }
 
 .nav-links a {
@@ -112,6 +116,12 @@ body {
     display: inline-block;
     margin-bottom: 1.5rem;
     backdrop-filter: blur(5px);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(235, 77, 75, 0); }
+    50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(235, 77, 75, 0.4); }
 }
 
 .hero h1 {
@@ -140,7 +150,7 @@ body {
     font-weight: 700;
     font-size: 0.95rem;
     margin: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .btn-whatsapp {
@@ -156,8 +166,8 @@ body {
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
 }
 
 .btn-large {
@@ -208,9 +218,14 @@ body {
     height: 380px;
     border-radius: 16px;
     border: 2px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
     object-fit: cover;
     object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.styled-img:hover {
+    transform: scale(1.02);
 }
 
 .features-list {
@@ -228,7 +243,9 @@ body {
     margin-right: 10px;
 }
 
-/* Aquarium Experience */
+/* ==========================================
+   Aquarium Experience Section
+   ========================================== */
 .aquarium-section {
     position: relative;
     padding: 6rem 0;
@@ -239,23 +256,20 @@ body {
 
 #aquarium-bg-video {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
     z-index: 0;
     transform: translateX(-50%) translateY(-50%);
     object-fit: cover;
-    opacity: 0.35;
+    opacity: 0.4;
 }
 
 .aquarium-overlay {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(2,11,20,0.7) 0%, rgba(2,11,20,0.95) 100%);
+    background: radial-gradient(circle, rgba(2,11,20,0.6) 0%, rgba(2,11,20,0.95) 100%);
     z-index: 1;
 }
 
@@ -282,8 +296,8 @@ body {
 .bubble {
     position: absolute;
     bottom: -20px;
-    background: rgba(255, 255, 255, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     animation: rise 8s infinite ease-in-out;
 }
@@ -296,20 +310,9 @@ body {
 .bubble:nth-child(6) { width: 12px; height: 12px; left: 92%; animation-duration: 7s; }
 
 @keyframes rise {
-    0% {
-        bottom: -20px;
-        transform: translateX(0) scale(1);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.8;
-        transform: translateX(15px) scale(1.1);
-    }
-    100% {
-        bottom: 100%;
-        transform: translateX(-15px) scale(1.2);
-        opacity: 0;
-    }
+    0% { bottom: -20px; transform: translateX(0) scale(1); opacity: 0; }
+    50% { opacity: 0.8; transform: translateX(15px) scale(1.1); }
+    100% { bottom: 100%; transform: translateX(-15px) scale(1.2); opacity: 0; }
 }
 
 .aquarium-grid {
@@ -320,30 +323,52 @@ body {
 }
 
 .aquarium-card {
-    background: rgba(10, 25, 41, 0.85);
+    background: rgba(15, 25, 40, 0.75);
     border: 1px solid var(--border-color);
     padding: 2.5rem 1.8rem;
     border-radius: 16px;
     backdrop-filter: blur(12px);
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.aquarium-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.15), transparent);
+    transition: left 0.6s ease;
+}
+
+.aquarium-card:hover::before {
+    left: 100%;
 }
 
 .aquarium-card:hover {
     transform: translateY(-8px);
     border-color: var(--gold);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.3);
 }
 
 .aquarium-card.highlight {
     border: 2px solid var(--gold);
-    background: linear-gradient(180deg, rgba(212, 175, 55, 0.2) 0%, rgba(10, 25, 41, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.2) 0%, rgba(15, 25, 40, 0.85) 100%);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
 }
 
 .card-icon {
     font-size: 2.5rem;
     color: var(--gold);
     margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.aquarium-card:hover .card-icon {
+    transform: scale(1.15) rotate(5deg);
 }
 
 .aquarium-card h3 {
@@ -363,16 +388,15 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
-    background: rgba(212, 175, 55, 0.12);
+    background: rgba(212, 175, 55, 0.1);
     border: 1px solid var(--gold);
     border-radius: 12px;
     padding: 1.5rem 2rem;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
 }
 
-.stat-item {
-    text-align: center;
-}
+.stat-item { text-align: center; }
 
 .stat-number {
     display: block;
@@ -387,7 +411,7 @@ body {
 }
 
 /* ==========================================
-   Menu Section - STRICT OVERFLOW FIXES
+   Menu Section - DYNAMIC GOLD CARDS
    ========================================== */
 .menu-tabs {
     display: flex;
@@ -412,51 +436,48 @@ body {
     background: var(--gold-gradient);
     color: #0b0e14;
     border-color: transparent;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.4);
 }
 
-.menu-content {
-    display: none;
-}
-
-.menu-content.active {
-    display: block;
-}
+.menu-content { display: none; }
+.menu-content.active { display: block; }
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
     gap: 2rem;
     align-items: stretch;
 }
 
 .menu-card {
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: 20px;
     border: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
     position: relative;
     overflow: hidden !important;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     display: flex;
     flex-direction: column;
-    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .menu-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     border-color: var(--gold);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.25);
 }
 
 .menu-card.featured {
     border: 2px solid var(--gold);
-    background: linear-gradient(180deg, rgba(212, 175, 55, 0.15) 0%, rgba(22, 27, 34, 0.9) 100%);
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.12) 0%, rgba(15, 23, 36, 0.9) 100%);
+    box-shadow: 0 10px 35px rgba(212, 175, 55, 0.2);
 }
 
-/* Strict Image Height & Crop Constraint */
 .card-img-wrapper {
     width: 100%;
-    height: 200px;
-    max-height: 200px;
+    height: 220px;
+    max-height: 220px;
     overflow: hidden;
     position: relative;
     flex-shrink: 0;
@@ -465,14 +486,18 @@ body {
 .card-img-wrapper img {
     width: 100%;
     height: 100%;
-    max-height: 200px;
     object-fit: cover !important;
     object-position: center !important;
     display: block;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.menu-card:hover .card-img-wrapper img {
+    transform: scale(1.08);
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: 1.8rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -481,34 +506,34 @@ body {
 
 .tag {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 15px; right: 15px;
     background: var(--gold-gradient);
     color: #0b0e14;
     font-size: 0.75rem;
     font-weight: 700;
-    padding: 4px 12px;
+    padding: 5px 14px;
     border-radius: 20px;
     z-index: 5;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .menu-card h3 {
     color: var(--gold-light);
     margin-bottom: 0.75rem;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
 }
 
 .menu-card p {
     color: var(--text-muted);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 0.92rem;
+    margin-bottom: 1.2rem;
 }
 
 .price {
-    display: block;
-    font-size: 1.35rem;
-    font-weight: 700;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 800;
     color: var(--gold);
     margin-top: auto;
 }
@@ -525,8 +550,7 @@ body {
 }
 
 .parking-thumb {
-    width: 100px;
-    height: 75px;
+    width: 100px; height: 75px;
     border-radius: 8px;
     object-fit: cover;
     object-position: center;
@@ -537,34 +561,30 @@ body {
     border-top: 1px solid var(--border-color);
 }
 
-.text-center {
-    text-align: center;
-}
+.text-center { text-align: center; }
 
 .whatsapp-float {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 30px; right: 30px;
     background-color: var(--whatsapp-green);
     color: white;
-    width: 65px;
-    height: 65px;
+    width: 65px; height: 65px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 34px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
     z-index: 1000;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
-    transform: scale(1.1);
+    transform: scale(1.12);
 }
 
 footer {
-    background: #06080c;
+    background: #040609;
     text-align: center;
     padding: 2.5rem;
     border-top: 1px solid rgba(255,255,255,0.05);
