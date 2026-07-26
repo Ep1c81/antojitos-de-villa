@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antojitos de Villa | El Mejor Marisco & Tradición Costarricense</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Video Hero Section -->
+    <header class="hero">
+        <video autoplay muted loop id="bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-underwater-footage-of-a-coral-reef-40824-large.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        
+        <nav class="navbar">
+            <img src="antojitoslogo.jpg" alt="Antojitos de Villa Logo" class="logo">
+            <div class="nav-links">
+                <a href="#about">Nosotros</a>
+                <a href="#menu">Menú</a>
+                <a href="#ambiance">Ambiente</a>
+                <a href="#reservations" class="btn-nav">Reservar</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <span class="badge-fomo"><i class="fa-solid fa-fire"></i> ¡Solo 4 mesas disponibles para hoy!</span>
+            <h1>Sabor Marino & Tradición de Calidad</h1>
+            <p>El pulpo a la parrilla y el ceviche más fresco en un ambiente familiar único.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/50622493700?text=Hola,%20quisiera%20hacer%20un%20pedido%20Express" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir Express (2249-3700)
+                </a>
+                <a href="#reservations" class="btn btn-secondary">
+                    <i class="fa-solid fa-calendar-check"></i> Reservar Mesa
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- FOMO Banner Bar -->
+    <div class="fomo-bar">
+        <p><i class="fa-solid fa-clock"></i> <strong>Cocina Abierta:</strong> Mariscos frescos del día seleccionados al momento por nuestro chef.</p>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container grid-2">
+            <div class="about-text">
+                <h2>Pasión por el Mar y Servicio con Corazón</h2>
+                <p>En <strong>Antojitos de Villa</strong> combinamos ingredientes marinos de máxima frescura con la calidez del servicio tico. Nuestro equipo está dedicado a hacerte sentir como en casa desde que cruzas la puerta.</p>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check-circle"></i> Terraza al aire libre y salón interno climatizado.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Parqueo privado y seguro para nuestros clientes.</li>
+                    <li><i class="fa-solid fa-check-circle"></i> Trato VIP y ambiente 100% familiar.</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="option1.jpg" alt="Pulpo a la Parrilla Antojitos de Villa">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Nuestro Menú Especializado</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="openMenu(event, 'mariscos')">Especialidades del Mar</button>
+                <button class="tab-btn" onclick="openMenu(event, 'tradicional')">Tradición Tica & Carnes</button>
+            </div>
+
+            <!-- Seafood Menu -->
+            <div id="mariscos" class="menu-content active">
+                <div class="menu-grid">
+                    <div class="menu-card featured">
+                        <span class="tag">Especialidad de la Casa</span>
+                        <h3>Pulpo Antojitos a la Parrilla</h3>
+                        <p>Tentáculos de pulpo marinados en finas hierbas, sellados a la parrilla sobre cama de puré artesanal y atún sellado en ajonjolí.</p>
+                        <span class="price">₡12,500</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Ceviche Mixto de la Villa</h3>
+                        <p>Pescado blanco, camarón y pulpo marinados en limón recién exprimido con culantro castilla y aguacate.</p>
+                        <span class="price">₡7,500</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Arroz con Mariscos Supremo</h3>
+                        <p>Cargado de camarones, calamar, pulpo y almejas, servido con papas a la francesa y ensalada verde.</p>
+                        <span class="price">₡8,900</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Pescado Entero Frito</h3>
+                        <p>Pargo rojo frito al punto crujiente, acompañado de patacones de plátano verde y pico de gallo.</p>
+                        <span class="price">₡10,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traditional Menu -->
+            <div id="tradicional" class="menu-content">
+                <div class="menu-grid">
+                    <div class="menu-card">
+                        <h3>Casado Tico Antojitos</h3>
+                        <p>Arroz, frijoles, plátano maduro, ensalada, huevo frito y elección de carne asada, pollo o chuleta.</p>
+                        <span class="price">₡4,800</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Chifrijo de la Casa</h3>
+                        <p>Capa de arroz, frijoles tiernos, chicharrón crujiente, pico de gallo, aguacate y tortillas tostadas.</p>
+                        <span class="price">₡5,200</span>
+                    </div>
+                    <div class="menu-card">
+                        <h3>Fajitas Mixtas</h3>
+                        <p>Tiras de res y pollo salteadas con chiles dulces y cebolla en salsa de la casa, servidas con tortillas calientes.</p>
+                        <span class="price">₡6,500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ambiance & Parking Section -->
+    <section id="ambiance" class="ambiance-section">
+        <div class="container grid-2">
+            <img src="fachada.jpg" alt="Fachada e Instalaciones" class="rounded-img">
+            <div>
+                <h2>El Espacio Perfecto para Compartir</h2>
+                <p>Ya sea en nuestra terraza fresca o en el confort de nuestro salón principal, en <strong>Antojitos de Villa</strong> cuentas con el espacio ideal para celebraciones, almuerzos ejecutivos o cenas familiares.</p>
+                <div class="parking-badge">
+                    <i class="fa-solid fa-square-parking"></i>
+                    <div>
+                        <strong>Parqueo Privado Disponible</strong>
+                        <p>Espacio amplios y cómodos para estacionar tu vehículo con tranquilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations Section -->
+    <section id="reservations" class="reservation-section">
+        <div class="container text-center">
+            <h2>¡Asegura tu Mesa Hoy Mismo!</h2>
+            <p>Debido a la alta demanda de los fines de semana, te recomendamos realizar tu reserva con anticipación.</p>
+            <a href="https://wa.me/50622493700?text=Hola,%20deseo%20reservar%20una%20mesa" class="btn btn-gold btn-large">
+                <i class="fa-brands fa-whatsapp"></i> Reservar Vía WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/50622493700?text=Hola!%20Me%20gustaria%20consultar%20el%20menu" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Antojitos de Villa. Todos los derechos reservados.</p>
+            <p>Servicio Express: <strong>2249-3700</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
