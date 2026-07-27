@@ -707,3 +707,23 @@ footer {
 .review-cta-wrapper {
     margin-top: 2rem;
 }
+/* Prevent horizontal overflow & fix mobile squishing */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+    .container, 
+    .footer-content, 
+    footer {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
